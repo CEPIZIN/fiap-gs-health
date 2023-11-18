@@ -1,0 +1,13 @@
+$primary: #42B4E6;
+$secondary: white;
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    background-color: $primary;
+}
