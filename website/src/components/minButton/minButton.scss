@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+$primary: white;
+$secondary: #000000;
+
+.MinButton{
+    font-family: 'Poppins', sans-serif;;
+    width: 108px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: 500px;
+    text-transform: capitalize;
+    background-color: transparent;
+    border-radius: 3px;
+    border-width: 1px;
+}
+

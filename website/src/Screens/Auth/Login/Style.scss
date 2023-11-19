@@ -1,5 +1,6 @@
 $primary: #42B4E6;
 $secondary: white;
+$tertiary: blue;
 
 * {
     margin: 0px;
@@ -9,5 +10,32 @@ $secondary: white;
 .container {
     display: flex;
     flex-direction: row;
-    background-color: $primary;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.containerfirst{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    width: 40%;
+    padding: 20px;
+}
+
+.containersecond{
+    height: 100%;
+    width: 60%;
+    background-image: url('../../../assets/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.containerforms{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
 }
