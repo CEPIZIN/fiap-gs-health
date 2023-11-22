@@ -27,10 +27,13 @@ $tertiary: blue;
 .containersecond{
     height: 100%;
     width: 60%;
-    background-image: url('../../../assets/background.png');
+    background-image: url('../../assets/background.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    @media (max-width: 1000px){
+        display: none
+    }
 }
 
 .containerforms{

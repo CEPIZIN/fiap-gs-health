@@ -1,5 +1,6 @@
 import './App.scss';
-import LoginController from './Screens/Auth/Login/Controller';
+import LoginController from "./screens/login/Controller";
+
 
 export default function App() {
   return (

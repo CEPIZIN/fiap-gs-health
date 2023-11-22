@@ -1,19 +1,16 @@
 import React from 'react';
-//import { useEffect } from 'react';
 import './Style.scss';
-import Input from '../../../components/input/Input';
-import MiniButton from '../../../components/minButton/minButton'; 
-import ViewHeader from '../../../components/header/header'
-import BigButton from '../../../components/button/bigButton';
+import Input from '../../components/input/Input';
+import MiniButton from '../../components/minButton/minButton'; 
+import ViewHeader from '../../components/header/header'
+import BigButton from '../../components/button/bigButton';
 
-// Criar nova div de container com row
-// Anexar Button e Paragrafo
 
-// H1, H2, H3, H4, H5, H6
-// P
 
 
 export default function LoginView() {
+
+
     return (
         <div className="container">
 
