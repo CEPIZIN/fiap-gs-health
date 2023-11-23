@@ -1,45 +1,48 @@
 import React from 'react';
 import './Style.scss';
 import Input from '../../components/input/Input';
-import MiniButton from '../../components/minButton/minButton'; 
-import ViewHeader from '../../components/header/header'
-import BigButton from '../../components/button/bigButton';
+import MiniButton from '../../components/minButton/minButton';
+import ViewHeader from '../../components/header/header';
 
+export default function LoginView({
+  email,
+  password,
+  handlerEmail,
+  handlerPassword,
+  handleSubmit,
+  authenticated,
+}) {
+  return (
+    <div className="container">
+      <section className="containerfirst">
+        <ViewHeader />
+        <MiniButton title={'Registrar >'} />
 
+        <form className="containerforms" onSubmit={handleSubmit}>
+          <Input
+            title={'E-mail'}
+            placeholder={'Digite seu e-mail'}
+            value={email}
+            onChange={handlerEmail}
+          />
+          <Input
+            title={'Senha'}
+            placeholder={'Digite sua senha'}
+            value={password}
+            onChange={handlerPassword}
+          />
 
+          <input type="submit" className="bigButton" />
+        </form>
 
-export default function LoginView() {
+        {authenticated && (
+          <div className="authenticated-message">
+            <p>Usuário autenticado com sucesso!</p>
+          </div>
+        )}
+      </section>
 
-
-    return (
-        <div className="container">
-
-            <section className='containerfirst'>
-
-            { /* Start ContainerHead */}
-            <ViewHeader/>
-            { /* End ContainerHead */}
-
-            <MiniButton title ={"Registrar >"}/>
-
-            { /* Start Center Forms */}
-                <div className='containerforms'>
-                    <Input
-                        title={"E-mail"}
-                        placeholder={"Digite seu e-mail"}
-                    />
-
-                    <Input
-                        title={"Senha"}
-                        placeholder={"Digite sua senha"}
-                    />
-                <BigButton title={"Entrar"}/>
-                </div>
-            { /* End Center Forms */}
-            </section>
-            <section className='containersecond'>
-                
-            </section>
-        </div>
-    );
+      <section className="containersecond"></section>
+    </div>
+  );
 }

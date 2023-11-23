@@ -40,5 +40,16 @@ $tertiary: blue;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 5px;
+}
+
+.bigButton{
+    font-family: 'Poppins', sans-serif;; ;
+    width: 388px;
+    height: 52px;
+    color: #ffff;
+    background-color:#42B4E6 ;
+    border-radius: 5px;
+    border-style: none;
 }
