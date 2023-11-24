@@ -1,7 +1,7 @@
 import './App.scss';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import HomeController from './screens/home/Controller';
-import LoginController from './screens/login/Controller';
+import HomeController from './pages/home/Controller';
+import LoginController from './pages/login/Controller';
 
 
 export default function App() {
