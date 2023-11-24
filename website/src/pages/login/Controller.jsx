@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import LoginView from './View';
 import json from '../../database/data.json';
 
@@ -6,6 +8,7 @@ export default function LoginController() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [authenticated, setAuthenticated] = useState(false);
+  const navigate = useNavigate();
 
   const handlerEmail = (e) => {
     setEmail(e.target.value);
@@ -19,11 +22,12 @@ export default function LoginController() {
     const user = json.find(user => user.email === email);
 
     if (!user || user.password !== password) {
-      alert('Fail!');
+      alert('Algo esta errado!');
       return false;
     }
 
-    alert('Success!');
+    navigate('/home');
+    alert('Successo! Logado com Sucesso');
     return true;
   };
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Style.scss';
 import Input from '../../components/input/Input';
-import MiniButton from '../../components/minButton/minButton';
+
 import ViewHeader from '../../components/header/header';
 
 export default function LoginView({
@@ -16,7 +16,7 @@ export default function LoginView({
     <div className="container">
       <section className="containerfirst">
         <ViewHeader />
-        <MiniButton title={'Registrar >'} />
+        
 
         <form className="containerforms" onSubmit={handleSubmit}>
           <Input
