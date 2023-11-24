@@ -1,7 +1,9 @@
 import './Style.scss'
 import ImgOne from '../../assets/imageone.jpg'
-import Advantages from '../../assets/advantages.png'
-import AdvantagesMobile from '../../assets/advantagemobile.png'
+import medicine from '../../assets/medicine.png'
+import Doctor from '../../assets/Doctor.png'
+import User from '../../assets/user.png'
+
 import ViewHeader from '../../components/header/header';
 import { useNavigate } from 'react-router-dom';
 
@@ -25,7 +27,10 @@ export default function HomeView(){
                     <div className='containermain'>
                         <h2 className='h2'>AMANENSE</h2>
                         <img src={ImgOne} className='imgone' alt='advantages'></img>
-                        <p className='p1'>Nosso aplicativo de saúde utiliza IA para gerar protocolos personalizados, oferecendo opções eficientes e agilizando atendimentos presenciais, conectando usuários e hospitais de forma prática e centrada no paciente.</p>
+                        <div className='title-and-p'>
+                            <p className='title'>AnameAsy</p>
+                            <p className='psmaller'>Nosso aplicativo de saúde utiliza IA para gerar protocolos personalizados, oferecendo opções eficientes e agilizando atendimentos presenciais, conectando usuários e hospitais de forma prática e centrada no paciente.</p>
+                        </div>
                         <button>Mais informacoes</button>
                     </div>
 
@@ -51,9 +56,17 @@ export default function HomeView(){
                 <section>
                     <h2 className='h2'>Vantagens</h2>
                     <div className='containeradvantages'>
-                        <img src={Advantages} className='advantages' alt='advantages'></img>
-                        <img src={AdvantagesMobile} className='advantages-mobile' alt='advantages'></img>
+                    
+                        <img src={medicine}  alt='imagen planilha'></img>
+                        <p className='padvantages' >Integrando tecnologia e saúde, nosso aplicativo agiliza o atendimento presencial, gerando senhas com base no protocolo de Manchester. Isso reduz o tempo de espera, preparando eficientemente a equipe médica para proporcionar uma experiência fluida aos pacientes.</p>
+                       
+                        <img src={Doctor}  alt='grupo de médicos'></img>
+                        <p className='padvantages' >Personalizando o atendimento, nosso aplicativo utiliza dados específicos do usuário para oferecer uma experiência de saúde personalizada, adaptando protocolos e recomendações de acordo com as necessidades individuais. Isso promove um cuidado mais eficaz e centrado no paciente, melhorando a satisfação e os resultados.</p>
+                      
+                        <img src={User}  alt='Usuário'></img>
+                        <p className='padvantages' >Promovendo uma abordagem centrada no usuário à saúde, nosso aplicativo oferece recursos e informações personalizadas, capacitando os usuários a tomar decisões informadas sobre seu bem-estar. Essa abordagem holística visa melhorar a saúde e a qualidade de vida de maneira adaptada às necessidades individuais..</p>
                     </div>
+                   
                 </section>
             </main>
         </div>

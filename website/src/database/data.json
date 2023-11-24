@@ -1,7 +1,14 @@
 [
     {
       "id": 1,
+      "name": "Laurinha",
       "email": "laura@fiap.com",
+      "password": "12312322"
+    },
+    {
+      "id": 2,
+      "name": "Bellu",
+      "email": "bellu@fiap.com",
       "password": "12312322"
     }
 
