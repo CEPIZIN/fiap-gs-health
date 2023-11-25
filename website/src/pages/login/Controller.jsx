@@ -18,18 +18,25 @@ export default function LoginController() {
     setPassword(e.target.value);
   };
 
-  const auth = (email, password) => {
-    const user = json.find(user => user.email === email);
-
-    if (!user || user.password !== password) {
-      alert('Algo esta errado!');
+  const auth = async (email, password) => {
+    try {
+      const response = await fetch('http://localhost:3001/users?email=' + email + '&password=' + password);
+      const data = await response.json();
+  
+      if (data.length === 0) {
+        alert('Algo está errado!');
+        return false;
+      }
+  
+      navigate('/home');
+      alert('Sucesso! Logado com sucesso');
+      return true;
+    } catch (error) {
+      console.error('Erro ao autenticar:', error);
       return false;
     }
-
-    navigate('/home');
-    alert('Successo! Logado com Sucesso');
-    return true;
   };
+  
 
   const handleSubmit = (event) => {
     event.preventDefault();
